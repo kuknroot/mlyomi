@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "mlyomi"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+numpy = "^2.0.1"
+pandas = "^2.2.2"
+torch = "^2.4.0"
+fastapi = "^0.112.1"
+fastui = "^0.6.0"
+gradio = "^4.41.0"
+streamlit = "^1.37.1"
+misskey-py = "^4.1.0"
+mypy = "^1.11.1"
+pytest = "^8.3.2"
+black = "^24.8.0"
+sqlalchemy = "^2.0.32"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

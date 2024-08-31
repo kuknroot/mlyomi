@@ -1,0 +1,29 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "mlyomi",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerFile": "../DockerFile",
+
+	"customizations": {
+		// カスタマイズ
+		"vscode": {
+		  "extensions": [
+			"DavidAnson.vscode-markdownlint",  // Markdownの構文とスタイルをチェックの拡張機能
+			"hediet.vscode-drawio",  // 図を記載する際に使うdrawioの拡張機能
+			"bierner.markdown-mermaid",  // mermaidの記載もプレビューできるようにする拡張機能
+			"ms-python.python",
+			"ms-toolsai.jupyter",
+			"visualstudioexptteam.vscodeintellicode",
+			"oderwat.indent-rainbow",
+			"kameshkotwani.google-search"
+		  ],
+		  "settings": {
+			"python.testing.pytestArgs": ["tests"],
+			"python.testing.unittestEnabled": false,
+			"python.testing.pytestEnabled": true
+			//"python.envFile": "${workspaceFolder}/.env"
+		  }
+		}
+	}
+}

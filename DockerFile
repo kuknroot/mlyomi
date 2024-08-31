@@ -1,0 +1,11 @@
+# ベースイメージとしてPython 3.12.4を使用
+FROM python:3.13.1
+
+# 作業ディレクトリを設定
+WORKDIR /workspaces/misskey-analysis
+
+# install python package
+COPY ./pyproject.toml* ./poetry.lock* ./
+RUN pip install poetry \
+    && poetry config virtualenvs.create false
+RUN poetry install
