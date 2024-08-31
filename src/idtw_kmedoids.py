@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 from pydantic import BaseModel, ConfigDict, Field
 from pydantic.alias_generators import to_camel
-from scipy.spatial.distance import pdist, squareform
 
 # %%
 from dtw_families import calc_idtw
@@ -77,35 +76,3 @@ class KMedoids(BaseSchema):
         self.cluster_centers_ = new_medoids
 
         return results['label'].values
-
-
-# %%
-# 分類したいクラスタ数をいろいろ変えて試してみる
-n_clusters = 10
-x_data = np.ndarray()
-
-# k-meansと同じように初期化ではクラスタ数を指定する
-km = KMedoids(n_cluster=n_clusters)
-calc_idtw
-
-# k-medoidsの利点として、座標がなくても距離行列があればクラスタリングができるので
-# (k-meansの場合は座標が必要)行列を入力データとしている
-# そのため、データを行列に変えている
-D = squareform(pdist(x_data, metric=))
-predicted_labels = km.fit_predict(D)
-centroids = km.cluster_centers_
-
-# %%
-# %%
-import numpy as np
-
-# %%
-def estimate_black_litterman(
-    degree_of_investor_confidence: float,
-    risk_aversion: float,
-    init_weights: np.ndarray,
-    return_covariance_matrix: np.ndarray,
-    
-    
-) -> tuple[np.ndarray, np.ndarray]:
-    
