@@ -1,6 +1,6 @@
 # %%
 # 説明は以下
-# 
+# https://publish.obsidian.md/kukn/ai/finance/Book/%E5%B0%8F%E6%9D%BE%E3%80%8C%E6%9C%80%E9%81%A9%E6%8A%95%E8%B3%87%E6%88%A6%E7%95%A5%E3%80%8D
 
 # %%
 import numpy as np
