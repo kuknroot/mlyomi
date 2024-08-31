@@ -1,4 +1,8 @@
 # %%
+# 説明は以下
+# 
+
+# %%
 import numpy as np
 
 # %%
