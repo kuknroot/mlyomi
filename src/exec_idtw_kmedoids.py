@@ -1,9 +1,13 @@
 # %%
+import numpy as np
+import pandas as pd
+
+# %%
 from exec_idtw_kmedoids import KMedoids
 
 # %%
 # 分類したいクラスタ数をいろいろ変えて試してみる
-n_cluster = 10
+n_cluster = 5
 x_data = np.ndarray()
 
 # k-meansと同じように初期化ではクラスタ数を指定する
@@ -18,18 +22,13 @@ predicted_labels = km.fit_predict(D)
 centroids = km.cluster_centers_
 
 # %%
-# %%
-import numpy as np
-
-# %%
 def estimate_black_litterman(
     degree_of_investor_confidence: float,
     risk_aversion: float,
     init_weights: np.ndarray,
-    return_covariance_matrix: np.ndarray,
-    
-    
+    return_covariance_matrix: np.ndarray,  
 ) -> tuple[np.ndarray, np.ndarray]:
+    pass
 
 df = pd.read_csv("./data/toyota.csv")
 df["Adj Close"].values
